@@ -4,6 +4,18 @@ This repository demonstrates the means to write a personal costmap plugin layer.
 
 Here there will be three layers where two layers are just implementation from the roswiki while the third one is a interactive costmap layer.  
 
+## Creating a Costmap Plugin
+
+**Step 1:**  
+Create a package with all the needed dependencies.  
+```bash
+# Minimal
+catkin_create_pkg ros-costmap-plugin roscpp rospy costmap_2d dynamic_reconfigure
+
+# With Grid Map and Interactive Markers
+catkin_create_pkg ros-costmap-plugin roscpp rospy costmap_2d dynamic_reconfigure grid_map_ros interactive_markers
+```
+
 ## Reference
 
 - Costmap_2D v.s. Occupancy_Grid [link](https://answers.ros.org/question/60026/difference-between-costmap2d-and-occupancygrid-not-clear/)

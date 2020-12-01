@@ -2,6 +2,8 @@
 
 This repository demonstrates the means to write a personal costmap plugin layer.
 
+Here there will be three layers where two layers are just implementation from the roswiki while the third one is a interactive costmap layer.  
+
 ## Reference
 
 - Costmap_2D v.s. Occupancy_Grid [link](https://answers.ros.org/question/60026/difference-between-costmap2d-and-occupancygrid-not-clear/)

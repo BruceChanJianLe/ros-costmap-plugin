@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros-costmap-plugin</name>
+  <version>0.0.1</version>
+  <description>
+    The ros-costmap-plugin package is a demonstration package to show how the costmap plugin is written and used.
+  </description>
+
+  <author email="jianle001@e.ntu.edu.sg">Bruce Chan Jian Le</author>
+  <maintainer email="jianle001@e.ntu.edu.sg">Bruce Chan Jian Le</maintainer>
+  <license>MIT</license>
+  <url type="website">https://github.com/BruceChanJianLe/ros-costmap-plugin</url>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>costmap_2d</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>grid_map_ros</build_depend>
+  <build_depend>interactive_markers</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+
+  <build_export_depend>costmap_2d</build_export_depend>
+  <build_export_depend>dynamic_reconfigure</build_export_depend>
+  <build_export_depend>grid_map_ros</build_export_depend>
+  <build_export_depend>interactive_markers</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+
+  <exec_depend>costmap_2d</exec_depend>
+  <exec_depend>dynamic_reconfigure</exec_depend>
+  <exec_depend>grid_map_ros</exec_depend>
+  <exec_depend>interactive_markers</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+
+
+  <export>
+    <costmap_2d plugin="${prefix}/costmap_plugins.xml"/>
+  </export>
+
+</package>

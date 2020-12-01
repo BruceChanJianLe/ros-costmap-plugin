@@ -1,6 +1,7 @@
 #include "ros-costmap-plugin/single_robot_front_obstacle_layer.hpp"
 #include <pluginlib/class_list_macros.hpp>
 
+PLUGINLIB_EXPORT_CLASS(ros_costmap_plugin_namespace::single_robot_front_obstacle_layer, costmap_2d::Layer);
 
 namespace ros_costmap_plugin_namespace
 {

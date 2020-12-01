@@ -26,3 +26,6 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
 )
+
+# Create single_robot_front_obstacle_layer
+add_library(single_obstacle src/single_robot_front_obstacle_layer.cpp)

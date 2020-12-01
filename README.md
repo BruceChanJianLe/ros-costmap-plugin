@@ -16,6 +16,17 @@ catkin_create_pkg ros-costmap-plugin roscpp rospy costmap_2d dynamic_reconfigure
 catkin_create_pkg ros-costmap-plugin roscpp rospy costmap_2d dynamic_reconfigure grid_map_ros interactive_markers
 ```
 
+**Step 2:**  
+Update export tag in package.xml.  
+```xml
+<export>
+    <costmap_2d plugin="${prefix}/costmap_plugins.xml" />
+</export>
+```
+
+**Step 3:**
+
+
 ## Reference
 
 - Costmap_2D v.s. Occupancy_Grid [link](https://answers.ros.org/question/60026/difference-between-costmap2d-and-occupancygrid-not-clear/)

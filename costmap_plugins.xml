@@ -1,0 +1,21 @@
+<class_libraries>
+
+  <library path="lib/libsingle_obstacle_layer">
+    <class type="ros_costmap_plugin_namespace::single_robot_front_obstacle_layer" base_class_type="costmap_2d::Layer">
+      <description>A layer that marks a one meter in front of the robot as obstacle</description>
+    </class>
+  </library>
+
+  <library path="lib/liball_obstacle_layer">
+    <class type="ros_costmap_plugin_namespace::all_robot_front_obstacle_layer" base_class_type="costmap_2d::Layer">
+      <description>A layer that marks all points that were ever one meter in front of the robot as obstacle</description>
+    </class>
+  </library>
+
+  <library path="lib/libinteractive_obstacle_layer">
+    <class type="ros_costmap_plugin_namespace::interactive_layer" base_class_type="costmap_2d::Layer">
+      <description>A layer that mark interactive marker point as an obstacle</description>
+    </class>
+  </library>
+
+</class_libraries>

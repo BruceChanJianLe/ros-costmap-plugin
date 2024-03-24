@@ -3,6 +3,7 @@ project(ros-costmap-plugin)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(catkin REQUIRED COMPONENTS
   costmap_2d
@@ -43,3 +44,21 @@ add_library(all_obstacle_layer src/all_robot_front_obstacle_layer.cpp)
 add_library(interactive_obstacle_layer src/interactive_obstacle_layer.cpp)
 add_dependencies(interactive_obstacle_layer ${PROJECT_NAME}_cfg)
 target_link_libraries(interactive_obstacle_layer ${catkin_LIBRARIES})
+
+# Install costmap_plugins.xml
+install(FILES costmap_plugins.xml
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+# Install library
+install(TARGETS single_obstacle_layer all_obstacle_layer interactive_obstacle_layer
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
+)
+
+# Install include directories
+install(
+    DIRECTORY include/${PROJECT_NAME}/
+    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+)

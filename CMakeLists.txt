@@ -42,7 +42,7 @@ add_library(all_obstacle_layer src/all_robot_front_obstacle_layer.cpp)
 
 # Create interactive_obstacle_layer
 add_library(interactive_obstacle_layer src/interactive_obstacle_layer.cpp)
-add_dependencies(interactive_obstacle_layer ${PROJECT_NAME}_cfg)
+add_dependencies(interactive_obstacle_layer ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(interactive_obstacle_layer ${catkin_LIBRARIES})
 
 # Install costmap_plugins.xml
